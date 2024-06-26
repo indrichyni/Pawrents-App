@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.android.pawrents.R
 import com.android.pawrents.databinding.ActivityWelcomeBinding
 import com.android.pawrents.ui.MainActivity
+import com.android.pawrents.ui.signin.AuthActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -35,7 +36,11 @@ class WelcomeActivity : AppCompatActivity() {
             //toSignUp
             binding.welcomeViewPager.setCurrentItem(2, true)
         }, {
-            //to sign in
+            //toSignIn
+                val intent = Intent(this, AuthActivity::class.java)
+                intent.putExtra("isSignUpFinished", it)
+                startActivity(intent)
+                if(it) finish()
             }
         )
         val viewPager: ViewPager2 = binding.welcomeViewPager
