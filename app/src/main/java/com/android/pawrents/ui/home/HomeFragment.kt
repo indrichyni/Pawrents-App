@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.android.pawrents.R
 import com.android.pawrents.data.model.Knowledge
+import com.android.pawrents.databinding.FragmentAddBinding
 import com.android.pawrents.databinding.FragmentHomeBinding
 import com.android.pawrents.ui.LoadingDialog
 import com.google.android.material.chip.Chip
